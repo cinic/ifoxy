@@ -1,4 +1,4 @@
-!DOCTYPE html
+doctype html
 html
   head
     title iFoxy
@@ -6,4 +6,6 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
+    = render 'shared/header'
     = yield
+    = render 'shared/footer'

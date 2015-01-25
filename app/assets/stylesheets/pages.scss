@@ -127,6 +127,8 @@ section {
           transition: transform 1s;
 
           &:hover {
+            -ms-transform: rotate(180deg); /* IE 9 */
+            -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
             transform: rotateY( 180deg );
           }
 

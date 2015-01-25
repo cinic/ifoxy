@@ -137,7 +137,9 @@ section {
             height: 100%;
             backface-visibility: hidden;
           }
-
+          .front {
+            z-index: 100;
+          }
           .back {
             background-color: $light-black;
             transform: rotateY( 180deg );

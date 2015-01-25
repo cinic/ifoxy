@@ -1,4 +1,8 @@
 set :deploy_to, '/home/cinic/ifoxy/production'
+set :app_name, "ifoxy"
+set :stage, :production
+set :rvm_type, :user
+set :user, "cinic"
 # Simple Role Syntax
 # ==================
 # Supports bulk-adding hosts to roles, the primary server in each group

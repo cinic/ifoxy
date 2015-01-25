@@ -5,6 +5,7 @@ class FeedbacksController < ApplicationController
 
     respond_to do |format|
       if @feedback.save
+        FeedbackMailer.notification(@feedback).deliver
         format.html {
           flash[:notice] = t('views.feedback.notice')
           render :show, layout: !request.xhr?

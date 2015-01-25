@@ -1,4 +1,4 @@
-set :deploy_to, '~/ifoxy/production'
+set :deploy_to, '/home/cinic/ifoxy/production'
 # Simple Role Syntax
 # ==================
 # Supports bulk-adding hosts to roles, the primary server in each group

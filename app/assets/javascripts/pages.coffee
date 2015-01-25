@@ -3,10 +3,10 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $ ->
   $('#new_feedback').on('ajax:success', (e, data, status, xhr) ->
+    ga('send', 'event', 'feedback', 'send')
     $('#new_feedback')[0].reset()
     $('#new_feedback').fadeOut(700, () ->
       $('#feedback-errors').html xhr.responseJSON.text
-      ga('send', 'event', 'feedback', 'send')
     )
   ).on 'ajax:error', (e, xhr, status, error) ->
     html_content = ''

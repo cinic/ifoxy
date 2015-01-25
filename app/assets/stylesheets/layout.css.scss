@@ -1,6 +1,8 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'vars';
+
 @mixin transition($transition-property, $transition-time, $method) {
   -webkit-transition: $transition-property $transition-time $method;
   -moz-transition: $transition-property $transition-time $method;
@@ -8,8 +10,6 @@
   -o-transition: $transition-property $transition-time $method;
   transition: $transition-property $transition-time $method;
 }
-
-@import 'vars';
 
 body {
   font-family: 'Bandera Pro';

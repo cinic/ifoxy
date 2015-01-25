@@ -33,6 +33,7 @@ section {
   }
 
   &.about {
+    position: relative;
     padding: 296px 0 58px;
     min-height: 190px;
     background-color: $light-black;
@@ -42,6 +43,16 @@ section {
 
     p {
       width: 600px;
+    }
+    &:before {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100px;
+      content: ' ';
+      background-image: image-url('line.png');
+      background-position: 50% 0;
+      background-repeat: no-repeat;
     }
   }
 
@@ -102,8 +113,20 @@ section {
   }
 
   &.works {
+    position: relative;
     padding: 50px 0;
     background-color: $light-black;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100px;
+      content: ' ';
+      background-image: image-url('line.png');
+      background-position: top right;
+      background-repeat: no-repeat;
+    }
 
     .works-list {
       margin: 0;

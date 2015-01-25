@@ -28,7 +28,6 @@ section {
     }
     p {
       margin: 10px 0;
-      font-weight: 500;
       color: #514618;
     }
   }
@@ -117,9 +116,6 @@ section {
         width: 440px;
         height: 440px;
         position: relative;
-        -webkit-perspective: 800px;
-        -moz-perspective: 800px;
-        -o-perspective: 800px;
         perspective: 800px;
 
 
@@ -127,19 +123,10 @@ section {
           width: 100%;
           height: 100%;
           position: absolute;
-          -webkit-transition: -webkit-transform 1s;
-          -moz-transition: -moz-transform 1s;
-          -o-transition: -o-transform 1s;
           transition: transform 1s;
-          -webkit-transform-style: preserve-3d;
-          -moz-transform-style: preserve-3d;
-          -o-transform-style: preserve-3d;
           transform-style: preserve-3d;
 
           &:hover {
-            -webkit-transform: rotateY( 180deg );
-            -moz-transform: rotateY( 180deg );
-            -o-transform: rotateY( 180deg );
             transform: rotateY( 180deg );
           }
 
@@ -151,18 +138,10 @@ section {
           }
 
           .back, .front {
-            -webkit-backface-visibility: hidden;
-            -moz-backface-visibility: hidden;
-            -o-backface-visibility: hidden;
             backface-visibility: hidden;
           }
 
           .back {
-            -webkit-transform: rotateY( 180deg );
-            -moz-transform: rotateY( 180deg );
-            -o-transform: rotateY( 180deg );
-            transform: rotateY( 180deg );
-
             h3, p {
               margin: 30px 30px 18px;
             }
@@ -237,5 +216,50 @@ section {
         border-color: #c44a16;
       }
     }
+  }
+}
+
+/**
+* CSS transitions and transforms
+*/
+.csstransitions.csstransforms {
+  section.works .works-list li {
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
+    
+    article {
+      -webkit-transition: -webkit-transform 1s;
+      -moz-transition: -moz-transform 1s;
+      -o-transition: -o-transform 1s;
+      transition: transform 1s;
+      -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      -o-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      
+      &:hover {
+        -webkit-transform: rotateY( 180deg );
+        -moz-transform: rotateY( 180deg );
+        -o-transform: rotateY( 180deg );
+        transform: rotateY( 180deg );
+      }
+
+      .back, .front {
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+
+      .back {
+        -webkit-transform: rotateY( 180deg );
+        -moz-transform: rotateY( 180deg );
+        -o-transform: rotateY( 180deg );
+        transform: rotateY( 180deg );
+      }
+    }
+
   }
 }

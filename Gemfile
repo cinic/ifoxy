@@ -16,7 +16,8 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-gem 'jquery-validation-rails'
+gem 'jquery-scrollto-rails'
+gem 'modernizr-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

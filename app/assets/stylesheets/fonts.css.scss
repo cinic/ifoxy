@@ -15,17 +15,20 @@
   font-family: 'Bandera Pro';
   font-style: normal;
   font-weight: 400;
-  src: local('Bandera Pro'), local('BanderaPro'), font-url('bandera-pro.otf') format('otf');
+  src: font-url('bandera-pro.eot');
+  src: local('Bandera Pro'), local('BanderaPro'), font-url('bandera-pro.eot?#iefix') format('embedded-opentype'),
+    font-url('bandera-pro.woff2') format('woff2'),
+    font-url('bandera-pro.woff') format('woff'),
+    font-url('bandera-pro.ttf') format('truetype');
 }
-@font-face {
-  font-family: 'Bandera Pro';
-  font-style: normal;
-  font-weight: 500;
-  src: local('Bandera Pro'), local('BanderaPro'), font-url('bandera-pro-medium.otf') format('otf');
-}
+
 @font-face {
   font-family: 'Bandera Pro';
   font-style: normal;
   font-weight: 600;
-  src: local('Bandera Pro'), local('BanderaPro'), font-url('bandera-pro-bold.otf') format('otf');
+  src: font-url('bandera-pro-bold.eot');
+  src: local('Bandera Pro'), local('BanderaPro'), font-url('bandera-pro-bold.eot?#iefix') format('embedded-opentype'),
+    font-url('bandera-pro-bold.woff2') format('woff2'),
+    font-url('bandera-pro-bold.woff') format('woff'),
+    font-url('bandera-pro-bold.ttf') format('truetype')
 }

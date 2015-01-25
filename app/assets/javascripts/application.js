@@ -13,7 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-// require jquery.validate
-// require jquery.validate.additional-methods
-// require jquery.validate.localization/messages_ru
+//= require jquery.scrollTo
 //= require_tree .

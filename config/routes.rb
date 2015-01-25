@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'pages/index'
+  resources :feedbacks, only: [:create]
   root 'pages#index'
 
   # Example of regular route:

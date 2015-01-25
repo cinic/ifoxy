@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), font-url('opensans-regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans'), local('OpenSans'), font-url('opensans-bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Bandera Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Bandera Pro'), local('BanderaPro'), font-url('bandera-pro.otf') format('otf');
+}
+@font-face {
+  font-family: 'Bandera Pro';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Bandera Pro'), local('BanderaPro'), font-url('bandera-pro-medium.otf') format('otf');
+}
+@font-face {
+  font-family: 'Bandera Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Bandera Pro'), local('BanderaPro'), font-url('bandera-pro-bold.otf') format('otf');
+}

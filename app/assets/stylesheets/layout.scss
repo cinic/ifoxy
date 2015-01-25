@@ -1,0 +1,117 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@mixin transition($transition-property, $transition-time, $method) {
+  -webkit-transition: $transition-property $transition-time $method;
+  -moz-transition: $transition-property $transition-time $method;
+  -ms-transition: $transition-property $transition-time $method;
+  -o-transition: $transition-property $transition-time $method;
+  transition: $transition-property $transition-time $method;
+}
+
+@import 'vars';
+
+body {
+  font-family: 'Bandera Pro';
+  font-weight: 400;
+  color: $light-black;
+}
+.layout {
+  margin: 0 auto;
+  width: 882px;
+}
+/**
+* Header
+*/
+body > header {
+  padding: 34px 0 0;
+  background-color: rgba(255, 255, 255, .8);
+
+  &.stick {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 4px 0;
+    .brand {
+      width: 45px;
+      height: 40px;
+      background: image-url('brand-without-text.svg') no-repeat 0 0;
+      background-size: 45px 40px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+  }
+  &.stick + .index {
+    padding-top: 154px;
+  }
+
+  .brand {
+    float: left;
+    margin-left: 34px;
+    width: 90px;
+    height: 120px;
+    background: image-url('brand.svg') no-repeat 0 0;
+    background-size: 90px 120px;
+    &.ir {
+      text-indent: -3600px;
+    }
+  }
+
+  nav {
+    float: right;
+    margin-top: 36px;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        float: left;
+        margin-left: 60px;
+        .link {
+          font-family: 'Open Sans';
+          font-weight: 600;
+          font-size: 15px;
+          text-transform: uppercase;
+          color: $light-black;
+          text-decoration: none;
+          @include transition(color, 0.2s, ease-in-out);
+          
+          &:hover {
+            color: #ea5413;
+          }
+        }
+      }
+    }
+  }
+}
+
+body > footer {
+  padding: 30px 0;
+  background-color: $light-black;
+  color: white;
+
+  .brand, .copy, nav { float: left; }
+
+  .copy {
+    margin: 20px 0 0 20px;
+    width: 350px;
+    font-size: 12px;
+  }
+}
+
+.group:before,
+.group:after {
+  content: ' ';
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+.group {
+  *zoom: 1;
+}

@@ -1,3 +1,220 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'vars';
+/**
+* Index page
+*/
+
+section {
+  color: $light-grey;
+  .title {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  &.index {
+    color: $light-black;
+    padding-bottom: 140px;
+    .title {
+      margin: 56px 0 10px;
+      width: 650px;
+      font-size: 60px;
+      line-height: 55px;
+    }
+    p {
+      margin: 10px 0;
+      font-weight: 500;
+      color: #514618;
+    }
+  }
+
+  &.about {
+    padding: 296px 0 58px;
+    min-height: 190px;
+    background-color: $light-black;
+    background-image: image-url('about.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+
+    p {
+      width: 600px;
+    }
+  }
+
+  &.how {
+    color: $light-black;
+
+    .title {
+      margin: 106px 0 32px;
+    }
+
+    ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      
+      li {
+        position: relative;
+        float: left;
+        padding: 30px 60px 30px 30px;
+        width: 351px;
+        height: 300px;
+
+        background: image-url('01.svg') no-repeat 340px 260px;
+
+
+        &:before {
+          float: left;
+          line-height: 41px;
+          font-size: 60px;
+          font-weight: 600;
+          content: '1';
+        }
+        &+li {
+          background: image-url('02.svg') no-repeat 340px 260px;
+          &:before {
+            content: '2';
+          }
+        }
+        & + li + li {
+          background: image-url('03.svg') no-repeat 340px 260px;
+          &:before {
+            content: '3';
+          }
+        }
+        & + li + li + li {
+          background: image-url('04.svg') no-repeat 340px 260px;
+          &:before {
+            content: '4';
+          }
+        }
+
+        p {
+          margin: 0 0 18px 54px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+
+  &.works {
+    padding: 50px 0;
+    background-color: $light-black;
+
+    .works-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        float: left;
+        margin: 0 1px 1px 0;
+        width: 440px;
+        height: 440px;
+        position: relative;
+        perspective: 800px;
+
+        article {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          transform-style: preserve-3d;
+          transition: transform 1s;
+
+          &:hover {
+            transform: rotateY( 180deg );
+          }
+
+          section {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+          }
+
+          .back {
+            background-color: $light-black;
+            transform: rotateY( 180deg );
+
+            h3, p {
+              margin: 30px 30px 18px;
+            }
+
+            p { line-height: 24px; }
+          }
+        }
+
+        .feedback-link {
+          display: block;
+          padding: 0 60px;
+          line-height: 440px;
+          background-color: $light-green;
+          color: $light-grey;
+          font-size: 36px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &.feedback {
+    padding: 60px 0;
+    color: $light-black;
+    
+    .title {
+      font-size: 28px;
+    }
+
+    .span {
+      float: left;
+      margin: 0 4px 4px 0;
+    }
+    .span1 { width: 216px; }
+    .span2 { width: 458px; }
+    .span3 { width: 196px; }
+
+    input, textarea {
+      margin-bottom: 4px;
+      padding: 0;
+      width: 96%;
+      font-size: 15px;
+      font-family: 'Open Sans';
+      border: 1px solid $light-black;
+    }
+
+    input {
+      padding: 0 2%;
+      height: 90px;
+      line-height: 90px;
+      &[type='submit'] {
+        height: 188px;
+        line-height: 186px;
+        background-color: $light-green;
+        color: white;
+        font-family: 'Bandera Pro';
+        font-weight: 400;
+        font-size: 24px;
+      }
+      &.error {
+        border-color: #c44a16;
+      }
+    }
+
+    textarea {
+      padding: 5px;
+      width: 448px;
+      height: 176px;
+      resize: none;
+
+      &.error {
+        border-color: #c44a16;
+      }
+    }
+  }
+}

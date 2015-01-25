@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
+#gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Template engnine
@@ -15,6 +15,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+
+gem 'jquery-validation-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -33,6 +35,19 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+group :production do
+  gem 'puma'
+  gem 'foreman'
+  gem 'newrelic_rpm'
+  gem 'google-analytics-rails'
+end
+
+group :development do
+  gem 'capistrano', '~> 3.2.0'
+  gem 'capistrano-rvm'
+  gem 'capistrano-bundler', '~> 1.1.2'
+  gem 'capistrano-rails', '~> 1.1'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

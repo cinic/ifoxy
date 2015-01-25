@@ -29,7 +29,6 @@ $ ->
     #    $(this).removeClass( 'min stick' )
     #    $(this).dequeue()
     #)
-    console.log( lastScrollTop, t)
     lastScrollTop = t
     t <= 154 && $( 'body > header' ).removeClass( 'min stick' )
 

@@ -6,7 +6,7 @@ $ ->
     $('#new_feedback')[0].reset()
     $('#new_feedback').fadeOut(700, () ->
       $('#feedback-errors').html xhr.responseJSON.text
-      _gaq.push(['_trackEvent', 'feedback', 'send'])
+      ga('send', 'event', 'feedback', 'send')
     )
   ).on 'ajax:error', (e, xhr, status, error) ->
     html_content = ''

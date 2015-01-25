@@ -139,6 +139,9 @@ section {
             height: 100%;
             backface-visibility: hidden;
           }
+          .front {
+            z-index: 100;
+          }
           .back {
             background-color: $light-black;
             -ms-transform: rotateY( 180deg ); /* IE 9 */
